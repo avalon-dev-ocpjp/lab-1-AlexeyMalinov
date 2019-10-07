@@ -46,7 +46,7 @@ public class RandomCitizenFactory implements Factory<Citizen> {
     @Override
     public Citizen create() {
 
-        return new RealCitizen(
+        return new CitizenImpl(
                 countres.get(random.nextInt(countres.size())),
                 names.get(random.nextInt(names.size())),
                 lastNames.get(random.nextInt(lastNames.size()))
@@ -70,7 +70,7 @@ public class RandomCitizenFactory implements Factory<Citizen> {
         Pattern countryPattern = Pattern.compile("([A-Z]{2}):(.+)");
         Matcher matcher = countryPattern.matcher(line.trim());
         if (matcher.find()) {
-            return new RealCountry(matcher.group(1), matcher.group(2));
+            return new CountryImpl(matcher.group(1), matcher.group(2));
         }
         return null;
     }

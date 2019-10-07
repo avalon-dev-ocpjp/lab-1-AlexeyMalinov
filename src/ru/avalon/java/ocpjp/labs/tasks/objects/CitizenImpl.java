@@ -1,12 +1,12 @@
 package ru.avalon.java.ocpjp.labs.tasks.objects;
 
-public class RealCitizen implements Citizen {
+public class CitizenImpl implements Citizen {
 
     private Country country;
     private String name;
     private String lastName;
 
-    public RealCitizen(Country country, String name, String lastName) {
+    public CitizenImpl(Country country, String name, String lastName) {
         this.country = country;
         this.name = name;
         this.lastName = lastName;

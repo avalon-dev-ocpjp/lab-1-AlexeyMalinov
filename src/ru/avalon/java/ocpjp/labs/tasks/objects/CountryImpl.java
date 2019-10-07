@@ -1,11 +1,11 @@
 package ru.avalon.java.ocpjp.labs.tasks.objects;
 
-public class RealCountry implements Country{
+public class CountryImpl implements Country{
     
     private String code;
     private String name;
 
-    public RealCountry(String code, String name) {
+    public CountryImpl(String code, String name) {
         this.code = code;
         this.name = name;
     }
